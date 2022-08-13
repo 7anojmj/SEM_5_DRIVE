@@ -1,0 +1,121 @@
+
+Build Time: May 28 2021 13:54:23 EDT 
+Executable Path: C:/PROGRA~1/ANSYSI~1/ANSYSS~1/v212/fluent/ntbin/win64/fluent.exe
+
+-------------------------------------------------------------------------------
+ID    Hostname    Core  O.S.         PID    Vendor                          
+-------------------------------------------------------------------------------
+n3    Mjs-LEGION  4/8  Windows-x64  2988   Intel(R) Core(TM) i5-9300H      
+n2    Mjs-LEGION  3/8  Windows-x64  14184  Intel(R) Core(TM) i5-9300H      
+n1    Mjs-LEGION  2/8  Windows-x64  24500  Intel(R) Core(TM) i5-9300H      
+n0*   Mjs-LEGION  1/8  Windows-x64  17732  Intel(R) Core(TM) i5-9300H      
+host  Mjs-LEGION       Windows-x64  5584   Intel(R) Core(TM) i5-9300H      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+
+Cortex Process ID: 1608 
+License Server Path: () 
+Reading "C:\Users\Manoj\OneDrive\Desktop\SEM TEST THURDAY LAB\ese_test00_files\dp0\FFF\MECH\FFF.1.msh"...
+Buffering for file scan...
+
+    2664 nodes, binary.
+     686 nodes, binary.
+    5669 2D interior faces, zone  1, binary.
+     334 2D wall faces, zone  5, binary.
+     334 2D wall faces, zone  6, binary.
+       9 2D velocity-inlet faces, zone  7, binary.
+       9 2D pressure-outlet faces, zone  8, binary.
+    3006 quadrilateral cells, zone  2, binary.
+
+
+
+Following contexts active in the case file have been de-activated because of their current context control conditions:
+"coupled-pseudo-transient"
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 9/9 = 1
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	outlet
+	inlet
+	pipe_wall_top
+	pipe_wall_bottom
+	surface_body
+	interior-surface_bodySetting surface_body (mixture) ... Done.
+
+WARNING: Current Mesh is incompatible with mesh operations defined. Following zones are missing:
+	wall-surface_body
+ Setting zone id of surface_body to 2.
+ Setting zone id of interior-surface_body to 1.
+ Setting zone id of outlet to 8.
+ Setting zone id of inlet to 7.
+ Setting zone id of pipe_wall_top to 6.
+ Setting zone id of pipe_wall_bottom to 5.
+Done.
+Setting surface_body (mixture) ... Done.
+Setting interior-surface_body (mixture) ... Done.
+No zone with name wall-surface_body (type wall) (mixture), skipped.
+
+Checking newly created zones for preferred zone IDs...
+
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+********************* WARNING ******************************************
+************************************************************************
+** Following expected zones were not found in the current mesh: 
+** 	wall-surface_body
+** Found Following new zones in the current mesh: 
+** 	outlet
+** 	inlet
+** 	pipe_wall_top
+** 	pipe_wall_bottom
+**
+** Please ensure that your current Setup is valid.
+************************************************************************
+************************************************************************
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent\fluent21.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Writing to Mjs-LEGION:"C:\Users\Manoj\OneDrive\Desktop\SEM TEST THURDAY LAB\ese_test00_files\dp0\FFF\Fluent\FFF.1-Setup-Output.cas.h5" in NODE0 mode and compression level 1 ...
+  Writing mesh ...
+        3006 cells,     1 zone  ...
+        6355 faces,     5 zones ...
+        3350 nodes,     1 zone  ...
+  Done.
+Done.
+
+Performance Timer for 0 iterations on 4 compute nodes
+  Average wall-clock time per iteration:              0.000 sec
+  Global reductions per iteration:                        0 ops
+  Global reductions time per iteration:               0.000 sec (0.0%)
+  Message count per iteration:                            0 messages
+  Data transfer per iteration:                        0.000 MB
+  LE solves per iteration:                                0 solves
+  LE wall-clock time per iteration:                   0.000 sec (0.0%)
+  LE global solves per iteration:                         0 solves
+  LE global wall-clock time per iteration:            0.000 sec (0.0%)
+  LE global matrix maximum size:                         0
+  AMG cycles per iteration:                           0.000 cycles
+  Relaxation sweeps per iteration:                        0 sweeps
+  Relaxation exchanges per iteration:                     0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+  Total SVARS touched:                              353
+
+  Total wall-clock time:                              0.000 sec
+

@@ -1,0 +1,108 @@
+(cx-use-window-id 2)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Mesh"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Mesh*Edit...")
+(cx-gui-do cx-set-toggle-button2 "Mesh Display*Table1*Frame1*Frame1*ToggleBox2(Edge Type)*Feature" #t)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame1*ToggleBox2(Edge Type)*Feature")
+(cx-gui-do cx-set-list-selections "Mesh Display*Table1*Frame3*List1(Surfaces)" '( 2 3 4))
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Mesh Display*Table1*Frame3*List1(Surfaces)" '( 1 2 3 4))
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Mesh Display*Table1*Frame3*List1(Surfaces)" '( 0 1 2 3 4))
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "ToolBar*Pointer Tools*translate")
+(cx-use-window-id 2)
+(cx-use-window-id 2)
+(dolly-camera -0.0328186 -0.0447292 0)
+(cx-gui-do cx-activate-item "ToolBar*Pointer Tools*rollzoom")
+(cx-use-window-id 2)
+(cx-set-camera '(0.0671814 0.0947256 1.28697) '(0.0671814 0.0947256 0) '(0.877166 0.480188 0) 0.514788 0.514788 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.0671814 0.0947256 1.38781) '(0.0671814 0.0947256 0) '(0.998774 -0.0494987 0) 0.555126 0.555126 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.0671814 0.0947256 1.42084) '(0.0671814 0.0947256 0) '(0.910549 -0.4134 0) 0.568337 0.568337 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.0671814 0.0947256 1.71053) '(0.0671814 0.0947256 0) '(0.749628 -0.66186 0) 0.684212 0.684212 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.0671814 0.0947256 2.85204) '(0.0671814 0.0947256 0) '(0.616301 -0.787511 0) 1.14082 1.14082 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(-0.0254308 0.098312 0.270809) '(-0.0254308 0.098312 1.04244e-07) '(0.6163 -0.78751 4.24916e-09) 0.0765963 0.0765963 "perspective")
+
+(cx-use-window-id 2)
+(cx-use-window-id 2)
+(cx-set-camera '(0.119292 0.0664337 1.93392) '(0.119292 0.0664337 -2.3836e-07) '(0.476623 -0.879108 6.28645e-09) 0.546994 0.546994 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.119292 0.0664337 4.2243) '(0.119292 0.0664337 -2.3836e-07) '(0.493659 -0.869656 6.28644e-09) 1.19481 1.19481 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.119292 0.0664337 6.18941) '(0.119292 0.0664337 -2.3836e-07) '(0.366312 -0.930492 6.28644e-09) 1.75063 1.75063 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.119292 0.0664337 7.4799) '(0.119292 0.0664337 -2.3836e-07) '(0.355714 -0.934595 6.28644e-09) 2.11564 2.11564 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 2.18394) '(0.104232 0.0886223 1.74751e-07) '(0.283431 -0.958993 6.22822e-09) 0.617712 0.617712 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 2.98902) '(0.104232 0.0886223 1.74751e-07) '(0.143995 -0.989578 6.22822e-09) 0.845422 0.845422 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 1.89729) '(0.104232 0.0886223 1.74751e-07) '(0.143995 -0.989578 6.22822e-09) 0.536635 0.536635 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 1.26569) '(0.104232 0.0886223 1.74751e-07) '(-0.0324657 -0.999473 6.22822e-09) 0.357992 0.357992 "perspective")
+
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 1.26044) '(0.104232 0.0886223 1.74751e-07) '(0.0194813 -0.99981 6.22822e-09) 0.356506 0.356506 "perspective")
+
+(cx-use-window-id 2)
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Project")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Postprocessing)*Table1*Table3(Graphics)*PushButton2(Contours)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuContours*Edit...")
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton1(Filled)" #t)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton1(Filled)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Project")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Postprocessing)*Table1*Table3(Graphics)*PushButton3(Vectors)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuVectors*Edit...")
+(cx-gui-do cx-set-real-entry-list "Vectors*Table1*Frame2*Frame3*RealEntry1(Scale)" '( 50))
+(cx-gui-do cx-activate-item "Vectors*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 2)
+(cx-set-camera '(0.104232 0.0886223 1.20661) '(0.104232 0.0886223 1.74751e-07) '(-0.00487068 -0.999988 6.22822e-09) 0.341281 0.341281 "perspective")
+
+(cx-use-window-id 2)
+(cx-use-window-id 2)
+(cx-use-window-id 2)
+(cx-gui-do cx-activate-item "Vectors*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 2)
+(cx-set-camera '(0.010286 0.0133072 2.06136) '(0.010286 0.0133072 5.19336e-09) '(-0.0178576 -0.999841 7.68341e-09) 0.58304 0.58304 "perspective")
+
+(cx-gui-do cx-activate-item "ToolBar*Pointer Tools*translate")
+(cx-use-window-id 2)
+(dolly-camera 0.0886436 -0.103675 0)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Postprocessing)*Table1*Table3(Reports)*PushButton2(Fluxes)")
+(cx-gui-do cx-set-list-selections "Flux Reports*List3(Boundaries)" '( 0))
+(cx-gui-do cx-activate-item "Flux Reports*List3(Boundaries)")
+(cx-gui-do cx-set-list-selections "Flux Reports*List3(Boundaries)" '( 0 2))
+(cx-gui-do cx-activate-item "Flux Reports*List3(Boundaries)")
+(cx-gui-do cx-activate-item "Flux Reports*PanelButtons*PushButton1(OK)")
+
+                  Mass Flow Rate               (kg/s)
+-------------------------------- --------------------
+                           inlet            16.094202
+                          outlet            -16.09477
+                ---------------- --------------------
+                             Net       -0.00056838989
+(cx-gui-do cx-activate-item "Flux Reports*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Project")
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Project")
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")

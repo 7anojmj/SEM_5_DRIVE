@@ -1,0 +1,2 @@
+/file/set-tui-version "19.1"
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Stop Journal")

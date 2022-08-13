@@ -1,0 +1,12 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+system1 = GetSystem(Name="FFF")
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.Edit()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours|wall-temperature"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours|wall-temperature"))(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-wall-temperature*Display")')
+setup1.SendCommand(Command="(cx-use-window-id 1)(cx-set-camera-relative '(-1.21328 0.000406027 -0.17559) '(0 0 0) '(0.148972 -0.572665 -0.426666) 0 0)(cx-use-window-id 1)(cx-set-camera-relative '(-0.032464 -0.208713 -0.969966) '(0 0 0) '(0.664319 -0.622123 0.11179) 0 0)(cx-use-window-id 1)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")')
+Save(Overwrite=True)

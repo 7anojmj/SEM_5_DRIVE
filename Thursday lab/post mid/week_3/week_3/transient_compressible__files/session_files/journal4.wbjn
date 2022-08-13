@@ -1,0 +1,13 @@
+# encoding: utf-8
+# 2021 R2
+SetScriptVersion(Version="21.2.209")
+fileReference1 = GetFileReference(Name="F16")
+fileReference1.Repair(FilePath="C:/Z-EMULATOR FILES/SEM 5/Thursday lab/post mid/week_3/week_3/pexit.c")
+system1 = GetSystem(Name="FFF")
+system1.Copy(KeepConnections=True)
+system2 = GetSystem(Name="FFF 1")
+setup1 = system2.GetContainer(ComponentName="Setup")
+fluentLauncherSettings1 = setup1.GetFluentLauncherSettings()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}, NumberOfProcessorsMeshing=4))
+setup1.Edit()
+Save(Overwrite=True)

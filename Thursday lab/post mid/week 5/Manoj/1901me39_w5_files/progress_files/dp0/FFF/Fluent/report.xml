@@ -1,0 +1,253 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 3d, pbns, lam (3d, pressure-based, laminar)
+Release: 19.1.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings             
+   -----------------------------------------------
+   Space                        3D                   
+   Time                         Steady               
+   Viscous                      Laminar              
+   Heat Transfer                Enabled              
+   Solidification and Melting   Disabled             
+   Radiation                    Surface to Surface   
+   Species                      Disabled             
+   Coupled Dispersed Phase      Disabled             
+   NOx Pollutants               Disabled             
+   SOx Pollutants               Disabled             
+   Soot                         Disabled             
+   Mercury Pollutants           Disabled             
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: insulation (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   50         
+      Cp (Specific Heat)     j/kg-k   constant   800        
+      Thermal Conductivity   w/m-k    constant   0.09       
+
+   Material: air (fluid)
+
+      Property                        Units     Method      Value(s)    
+      ---------------------------------------------------------------
+      Density                         kg/m3     ideal-gas   #f          
+      Cp (Specific Heat)              j/kg-k    constant    1021        
+      Thermal Conductivity            w/m-k     constant    0.0371      
+      Viscosity                       kg/m-s    constant    2.485e-05   
+      Molecular Weight                kg/kmol   constant    28.966      
+      Thermal Expansion Coefficient   1/k       constant    0           
+      Speed of Sound                  m/s       none        #f          
+
+   Material: aluminum (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   2719       
+      Cp (Specific Heat)     j/kg-k   constant   871        
+      Thermal Conductivity   w/m-k    constant   202.4      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name    id   type    
+      ------------------
+      fluid   11   fluid   
+
+   Setup Conditions
+
+      fluid
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name       id   type   
+      --------------------
+      w-high-z   13   wall   
+      w-low-z    14   wall   
+      w-high-y   15   wall   
+      w-low-y    16   wall   
+      w-high-x   17   wall   
+      w-low-x    18   wall   
+
+   Setup Conditions
+
+      w-high-z
+
+         Condition                                       Value    
+         ------------------------------------------------------
+         Wall Thickness (m)                              0.05     
+         Thermal BC Type                                 5        
+         Convective Heat Transfer Coefficient (w/m2-k)   5        
+         Free Stream Temperature (k)                     293.15   
+         Wall Motion                                     0        
+         Shear Boundary Condition                        0        
+         Internal Emissivity                             0.95     
+         External Emissivity                             0.75     
+         External Radiation Temperature (k)              293.15   
+         Faces Per Surface Cluster                       1600     
+
+      w-low-z
+
+         Condition                                       Value    
+         ------------------------------------------------------
+         Wall Thickness (m)                              0.05     
+         Thermal BC Type                                 5        
+         Convective Heat Transfer Coefficient (w/m2-k)   5        
+         Free Stream Temperature (k)                     293.15   
+         Wall Motion                                     0        
+         Shear Boundary Condition                        0        
+         Internal Emissivity                             0.95     
+         External Emissivity                             0.75     
+         External Radiation Temperature (k)              293.15   
+         Faces Per Surface Cluster                       1600     
+
+      w-high-y
+
+         Condition                                       Value    
+         ------------------------------------------------------
+         Wall Thickness (m)                              0.05     
+         Thermal BC Type                                 5        
+         Convective Heat Transfer Coefficient (w/m2-k)   3        
+         Free Stream Temperature (k)                     293.15   
+         Wall Motion                                     0        
+         Shear Boundary Condition                        0        
+         Internal Emissivity                             0.95     
+         External Emissivity                             0.75     
+         External Radiation Temperature (k)              293.15   
+         Faces Per Surface Cluster                       1600     
+
+      w-low-y
+
+         Condition                                       Value    
+         ------------------------------------------------------
+         Wall Thickness (m)                              0.05     
+         Thermal BC Type                                 5        
+         Convective Heat Transfer Coefficient (w/m2-k)   3        
+         Free Stream Temperature (k)                     293.15   
+         Wall Motion                                     0        
+         Shear Boundary Condition                        0        
+         Internal Emissivity                             0.95     
+         External Emissivity                             0.75     
+         External Radiation Temperature (k)              293.15   
+         Faces Per Surface Cluster                       1600     
+
+      w-high-x
+
+         Condition                                       Value    
+         ------------------------------------------------------
+         Wall Thickness (m)                              0.05     
+         Thermal BC Type                                 5        
+         Convective Heat Transfer Coefficient (w/m2-k)   5        
+         Free Stream Temperature (k)                     293.15   
+         Wall Motion                                     0        
+         Shear Boundary Condition                        0        
+         Internal Emissivity                             0.95     
+         External Emissivity                             0.75     
+         External Radiation Temperature (k)              293.15   
+         Faces Per Surface Cluster                       1600     
+
+      w-low-x
+
+         Condition                   Value      
+         ------------------------------------
+         Material Name               aluminum   
+         Thermal BC Type             0          
+         Temperature (k)             473.15     
+         Wall Motion                 0          
+         Shear Boundary Condition    0          
+         Internal Emissivity         0.95       
+         Faces Per Surface Cluster   1600       
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation   Solved   
+      -----------------
+      Flow       yes      
+      Energy     yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Relaxation
+
+      Variable      Relaxation Factor   
+      -------------------------------
+      Density       1                   
+      Body Forces   1                   
+      Energy        0.75                
+
+   Linear Solver
+
+                 Solver    Termination   Residual Reduction   
+      Variable   Type      Criterion     Tolerance            
+      -----------------------------------------------------
+      Flow       F-Cycle   0.1                                
+      Energy     F-Cycle   0.1                                
+
+   Pressure-Velocity Coupling
+
+      Parameter                            Value     
+      --------------------------------------------
+      Type                                 Coupled   
+      Pseudo Transient                     yes       
+      Explicit momentum under-relaxation   0.5       
+      Explicit pressure under-relaxation   0.5       
+
+   Discretization Scheme
+
+      Variable   Scheme                
+      ------------------------------
+      Pressure   Body Force Weighted   
+      Density    Second Order Upwind   
+      Momentum   Second Order Upwind   
+      Energy     Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                    Limit   
+      ---------------------------------
+      Minimum Absolute Pressure   1       
+      Maximum Absolute Pressure   5e+10   
+      Minimum Temperature         1       
+      Maximum Temperature         5000    
+
+</SolverSettings>
+
+</FluentXMLReport>

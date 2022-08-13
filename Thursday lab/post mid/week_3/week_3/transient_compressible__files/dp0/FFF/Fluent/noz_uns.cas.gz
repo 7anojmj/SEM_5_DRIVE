@@ -1,0 +1,31 @@
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Stop Journal")
+
+Journal closed.
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Stop Journal")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "noz_uns.dat.gz") "All Files (*)")
+
+Opening input journal to file "C:/Users/student/Desktop/week_3/week_3/transient_compressible__files/dp0/FFF/Fluent/noz_uns.dat.gz".
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Stop Journal")
+
+Journal closed.
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Stop Transcript")
+
+Performance Timer for 6500 iterations on 4 compute nodes
+  Average wall-clock time per iteration:              0.096 sec
+  Global reductions per iteration:                      101 ops
+  Global reductions time per iteration:               0.000 sec (0.0%)
+  Message count per iteration:                         1095 messages
+  Data transfer per iteration:                        0.538 MB
+  LE solves per iteration:                                3 solves
+  LE wall-clock time per iteration:                   0.030 sec (31.0%)
+  LE global solves per iteration:                         1 solves
+  LE global wall-clock time per iteration:            0.000 sec (0.1%)
+  LE global matrix maximum size:                        44
+  AMG cycles per iteration:                           5.540 cycles
+  Relaxation sweeps per iteration:                      111 sweeps
+  Relaxation exchanges per iteration:                     0 exchanges
+  Time-step updates per iteration:                     0.09 updates
+  Time-step wall-clock time per iteration:            0.008 sec (7.9%)
+
+  Total wall-clock time:                            623.809 sec
+
